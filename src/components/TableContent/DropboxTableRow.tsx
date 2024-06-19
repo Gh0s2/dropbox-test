@@ -8,7 +8,7 @@ import ItemActionsButton from "./ItemActionsButton.tsx";
 import ItemImagePicker from "./ItemImagePicker.tsx";
 
 
-type DropBoxItems = {
+type DropBoxItem = {
   ".tag": string
   id: string
   name: string
@@ -18,7 +18,7 @@ type DropBoxItems = {
 }
 
 interface IDropboxTableBody {
-  items: DropBoxItems[],
+  items: DropBoxItem[],
 }
 
 /** Component for table row */
@@ -27,7 +27,7 @@ const DropboxTableRow: FC<IDropboxTableBody> = ({ items }) => {
 
   const dispatch = useAppDispatch();
 
-  const openItem = (item: any, event: React.MouseEvent) => {
+  const openItem = (item: DropBoxItem, event: React.MouseEvent) => {
     if ((event.target as HTMLElement).tagName !== "TD") {
       return;
     }

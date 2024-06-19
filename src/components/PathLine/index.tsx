@@ -12,7 +12,6 @@ const PathLine = () => {
   const pathArray = path.split("/");
 
   const handleBreadcrumbClick = (link: string) => {
-    console.log(pathArray);
     const isLastItem = link === pathArray[pathArray.length - 1];
     if (!isLastItem) {
       const indexPath = pathArray.indexOf(link);
