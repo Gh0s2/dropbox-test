@@ -35,7 +35,7 @@ const ItemActionsButton: FC<IItemActionsButton> = ({ itemPath }) => {
       if (response.meta.requestStatus === "rejected") {
         showToast("Error deleting item", "error");
       } else {
-        showToast("Item Deleted", "success");
+        showToast("Deleted successfully", "success");
       }
     });
 
