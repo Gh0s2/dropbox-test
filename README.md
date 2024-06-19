@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# Dropbox-test is React Web Application of basic file explorer with Dropbox Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dropbox-test is a simple file explorer application built with React, Vite, Redux Toolkit, Dropbox SDK and MUI. 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Browse folders and sub-folders
+-   View files
+-   Upload new files to the current directory
+-   Create new folders
+-   Delete files and folders
+-   Integration with Dropbox SDK
 
-## Expanding the ESLint configuration
+## Get started Dropbox
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Create account on dropbox
+- Go to https://www.dropbox.com/developers and open **App Console** tab
+- Press **Create app** button
+  1. Choose an API - **Scoped access**
+  2. Choose the type of access you need - **App folder**
+  3. Name your App
+  4. Press **Create app** button
+- Once you created your app go to **Permissions** tab
+- Check these permissions:
+  - files.content.write
+  - files.content.read
+  - sharing.write
+  - sharing.read
+  - files.metadata.read
+- Submit changes
+- Go to **Settings** tab and generate **Access token**
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To get started with Dropbox-test, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository.
+2. Install `node_modules` with `npm install`.
+3. Create `.env` like in `.env.example`
+4. Update `VITE_DROPBOX_ACCESS_TOKEN` in `.env` file with access toke you generated before.
+5. Run the project:
+   `npm run dev`
+   The application will be accessible at http://localhost:5173/
