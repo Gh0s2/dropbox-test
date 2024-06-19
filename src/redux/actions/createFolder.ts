@@ -22,7 +22,7 @@ const createFolder = createAsyncThunk('dropbox/createFolder', async (data: IData
     };
   } catch (error: any) {
     return rejectWithValue({
-      status: 'error',
+      status: error.status,
       result: null,
       message: error.message,
     });

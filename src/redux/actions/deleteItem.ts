@@ -13,7 +13,7 @@ const deleteItem = createAsyncThunk('dropbox/deleteItem', async (path: string, {
     };
   } catch (error: any) {
     return rejectWithValue({
-      status: 'error',
+      status: error.status,
       result: null,
       message: error.message,
     });

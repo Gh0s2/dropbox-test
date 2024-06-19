@@ -3,7 +3,7 @@ import dropbox from "../../utils/dropbox.ts";
 
 interface IData {
   path: string,
-  file: Object,
+  file: object,
 }
 
 /** Async thunk to create a new file on Dropbox. */

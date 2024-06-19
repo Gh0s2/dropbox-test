@@ -9,8 +9,8 @@ export const fetchItemsFromDbx = createAsyncThunk(
     try {
       const response = await dropbox.filesListFolder({ path });
       return response.result.entries;
-    } catch (e) {
-      throw e;
+    } catch (error) {
+      throw error;
     }
   }
 );

@@ -24,8 +24,8 @@ const getSharingLink = createAsyncThunk('dropbox/getSharingLink', async (path: s
   } catch (error: any) {
     return rejectWithValue({
       status: error.status,
-      result: error.result,
-      message: error.error,
+      result: null,
+      message: error.message,
     });
   }
 });
