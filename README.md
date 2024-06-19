@@ -37,7 +37,7 @@ To get started with Dropbox-test, follow these steps:
 1. Clone the repository.
 2. Install `node_modules` with `npm install`.
 3. Create `.env` like in `.env.example`
-4. Update `VITE_DROPBOX_ACCESS_TOKEN` in `.env` file with access toke you generated before.
+4. Update `VITE_DROPBOX_ACCESS_TOKEN` in `.env` file with access token you generated before.
 5. Run the project:
    `npm run dev`
    The application will be accessible at http://localhost:5173/
